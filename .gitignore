@@ -30,4 +30,4 @@ texdoc-*.zip
 # *.vimrc
 # output/*
 
-!main.pdf
+!presentation/main.pdf
