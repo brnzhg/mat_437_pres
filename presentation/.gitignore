@@ -1,0 +1,33 @@
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+
+# Build tool auxiliary files
+*.fdb_latexmk
+# *.pdfsync
+
+# Generated documents
+*.dvi
+*.pdf
+*.1
+*.gz
+
+# Bundle
+# .bundle
+# vendor/*
+
+# Temporaly
+tmp/*
+texdoc-*.zip
+
+# local
+# *.vimrc
+# output/*
+
+!presentation/main.pdf
