@@ -1,0 +1,51 @@
+% \NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mat437pres}[2020/05/29 Mat 437 Pres Style]
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+
+\usepackage{amsmath,amsthm,amssymb}
+% \usepackage{calrsfs}
+% \usepackage{eucal}
+\usepackage{commath}
+\usepackage{bm}
+
+% \usepackage{pgfplots}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{subfig}
+
+\usepackage{url}
+%\usepackage{subcaption}
+% \usepackage{cleveref}
+
+
+\pagestyle{fancyplain}
+\fancyhf{}
+
+\newcommand{\powerset}{\mathcal{P}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\rationals}{\mathbb{Q}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\complexes}{\mathbb{C}}
+\newcommand{\nats}{\mathbb{Z_{+}}}
+\newcommand{\mathbintxt}[1]{\mathbin{\text{#1}}}
+
+\newcommand{\topovar}{\mathcal{T}}
+\newcommand{\topovarb}{\mathcal{B}}
+\newcommand{\standardtxt}{\text{standard}}
+\newcommand{\topostandard}{\topovar_\standardtxt}
+\newcommand{\topostandardb}{\topovarb_\standardtxt}
+\newcommand{\interior}{\text{Int}}
+\newcommand{\boundary}{\text{Bd}}
+
+\newcommand{\complexconj}[1]{\overline{#1}}
+\newcommand{\impart}{\text{Im}}
+\newcommand{\repart}{\text{Re}}
+\newcommand{\Log}{\text{Log}}
+\newcommand{\CalLog}{\mathcal{L}\textrm{og}}
+\newcommand{\Arg}{\text{Arg}}
+\newcommand{\CalArg}{\mathcal{A}\textrm{rg}}
+
+\newcommand{\tocstarsection}[1]{\section*{#1}\addcontentsline{toc}{section}{\protect\numberline{}#1}}
+\newcommand{\tocstarsubsection}[1]{\subsection*{#1}\addcontentsline{toc}{subsection}{\protect\numberline{}#1}}
