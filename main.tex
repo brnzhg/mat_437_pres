@@ -58,7 +58,7 @@ We can iterate taking the pre-image of a set containing $J_c$ to approach its sh
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=.4\linewidth]{600px-Time_escape_Julia_set.jpg}
+    \includegraphics[width=.4\linewidth]{images/600px-Time_escape_Julia_set.jpg}
     \caption{Julia set, bands around set indicate "escape" iterations \cite{JuliaTimeEscape}}
     \label{fig:julia_escape}
 \end{figure}
@@ -73,8 +73,8 @@ Karl Sims gives a visualization for a disk in Fig \ref{fig:karlsims_preimage}. F
     \setlength{\abovecaptionskip}{0pt}
     \captionsetup[subfigure]{labelformat=empty}
     \centering
-    \subfloat[]{\includegraphics[width=.8\linewidth]{karlsimsfold1.png}} \\[-3ex]%
-    \subfloat[]{\includegraphics[width=.8\linewidth]{karlsimsfold2.png}}%
+    \subfloat[]{\includegraphics[width=.8\linewidth]{images/karlsimsfold1.png}} \\[-3ex]%
+    \subfloat[]{\includegraphics[width=.8\linewidth]{images/karlsimsfold2.png}}%
     \caption{Approaching Julia set by pre-images of disk \cite{KarlSims}} %
     \label{fig:karlsims_preimage}%
 \end{figure}%
@@ -117,13 +117,13 @@ Plotting algorithm: take points in disk, iterate $P_c$, remove points that "esca
 \end{itemize}
 
 \begin{figure}[!h]
-    \includegraphics[width=\linewidth]{Cantor_set_in_seven_iterations.png}
+    \includegraphics[width=\linewidth]{images/Cantor_set_in_seven_iterations.png}
     \caption{Cantor set interval visualization \cite{Cantor}}%\label{fig:boat1}
 \end{figure}
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=.4\linewidth]{julia_fatou_dust_c_45_1428.png}
+    \includegraphics[width=.4\linewidth]{images/julia_fatou_dust_c_45_1428.png}
     \caption{Fatou dust, $c = .45 + .1428i$}%\label{fig:boat1}
 \end{figure}
 
@@ -159,15 +159,15 @@ TODO something about Julia set fixed points, 0 is circle, -2 is chaotic, Mandelb
 \begin{figure}[!htbp]
     %\setlength{\abovecaptionskip}{0pt}
     \centering
-    \subfloat[]{\includegraphics[width=.4\linewidth]{800px-Mandel_zoom_00_mandelbrot_set.jpg}}%
-    \subfloat[]{\includegraphics[width=.4\linewidth]{Mini_mandelbrot.jpg}}%
+    \subfloat[]{\includegraphics[width=.4\linewidth]{images/800px-Mandel_zoom_00_mandelbrot_set.jpg}}%
+    \subfloat[]{\includegraphics[width=.4\linewidth]{images/Mini_mandelbrot.jpg}}%
     \caption{Typical Mandelbrot \cite{NormalMandelbrot} and a deformed "Mini-Mandelbrot" \cite{MiniMandelbrot}} %
     \label{fig:MandelbrotSet}%
 \end{figure}%
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=.4\linewidth]{420px-Topologist_sine_curve.png}
+    \includegraphics[width=.4\linewidth]{images/420px-Topologist_sine_curve.png}
     \caption{Topologist's Sine Curve \cite{TopSineCurve}}%\label{fig:boat1}
 \end{figure}
 
@@ -210,7 +210,7 @@ For $c$ on the boundary of those with fixed points, we have $\abs{z^*} = \frac{1
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=.4\linewidth]{MandelMap1.png}
+    \includegraphics[width=.4\linewidth]{images/MandelMap1.png}
     \caption{Cardiods labeled with period \cite{MichaelFrame}} %\label{fig:boat1}
     \label{fig:MandelbrotCycles}
 \end{figure}
@@ -220,23 +220,50 @@ For $c$ on the boundary of those with fixed points, we have $\abs{z^*} = \frac{1
 
 
 
-\section{General Julia Sets and Newton Fractals}
+\section{General Julia Sets}
 
 Definitions
-yj
-In the context of the Quadratic Julia Set described earlier
+\begin{itemize}
+    \item In general, iterating function $f(x) = p(x) / q(x)$ for complex polynomials $p, q$, no shared roots
+    \begin{itemize}
+        \item $f$ maps Riemann sphere onto itself
+        \item $f$ is holomorphic
+    \end{itemize}
+    \item $f$ is invariant on open sets, Fatou Domains
+    \item Fatou Set is union of Fatou Domains, it's dense!
+    \item "True" Julia Set is the complement, boundary, and also invariant
+\end{itemize}
+
+In the context of the Quadratic Julia Set described earlier...
+\begin{itemize}
+    \item "True" Julia Set is boundary of filled-in Julia Set
+    \item Fatou Domains are the interior of filled in Julia Set (may be empty), and complement of Julia Set with unbounded orbit
+\end{itemize}
 
 
-General Julia set. Boundary, between invariant open sets of the iterative rational function, taking it as mapping Riemann sphere to itself (include infinity)
+\section{Newton Fractals}
 
-"True" Julia set in quadratic, boundary between points that stay within "filled in Julia set" interior, dont go off to infinity, and those that do
-    For polynomials the boundary of bounded is equivalent
+\begin{itemize}
+    \item Newton method
+    \begin{itemize}
+        \item Iteratively approximate zeroes using tangent lines
+        \item $x_{n+1} = x_n - p(x_n)/p'(x_n)$
+        \item Works with complex functions
+    \end{itemize}
+    \item $f(x) = x - p(x)/p'(x)$ can be used as the iteration function for a Julia Set
+    \item One Fatou Domain for each zero of $f$
+    \item True Julia Set is the boundary where the method fails!
+\end{itemize}
 
-For non-bounded different. Interesting case is Newton's method
 
-
-
-% Newton Fractals
+\begin{figure}[!htbp]
+    %\setlength{\abovecaptionskip}{0pt}
+    \centering
+    \subfloat[$z^2 - 1$, two roots \cite{MichaelFrame}]{\includegraphics[width=.4\linewidth]{images/NewtonTwoRoots.png}}%
+    \subfloat[$z^3 - 1$, three roots \cite{NewtonThreeRoots}]{\includegraphics[width=.4\linewidth]{images/800px-Julia_set_for_three_roots.png}}%
+    \caption{Newton's Method} %
+    %\label{fig:M}%
+\end{figure}%
 
 
 \bibliographystyle{plain} % We choose the "plain" reference style
