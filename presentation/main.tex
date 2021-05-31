@@ -181,9 +181,8 @@ Let $z_n = P_c^n(0)$,
 
 Given $\abs{z_n} > 2$, for $\abs{c} \leq 2$
 \begin{align*}
-    \abs{z_{n+1}} &\geq \abs{z_n}^2 - \abs{c} &&\text{Reverse Triangel Inequality} \\
-    &\geq 2\abs{z_n} - 2 = \abs{z_n} + (\abs{z_n} - 2) \\
-    &> \abs{z_n}
+    \abs{z_{n+1}} &\geq \abs{z_n}^2 - \abs{c} &&\text{Reverse Triangle Inequality} \\
+    &\geq 2\abs{z_n} - 2 = \abs{z_n} + (\abs{z_n} - 2) > \abs{z_n}
 \end{align*}
 
 For $\abs{c} > 2$, inductively $\abs{z_n} > \abs{c}$, so
@@ -194,9 +193,10 @@ For $\abs{c} > 2$, inductively $\abs{z_n} > \abs{c}$, so
 
 \begin{itemize}
     \item "Main" Cardioid contains points whose sequence (orbit) approach attractive fixed point
+    \item For attractive fixed point $x^*$, $x^* = f(x^*)$ and $\abs{f'(x)} < 1$
     \begin{itemize}
-        \item For fixed point $x^*$, $x_{n+1} = f(x_n) \approx f(x^*) + f'(x^*)(x_n - x^*)$
-        \item $\abs{x_{n + 1} - x^*} = \abs{x_{n+1} - f(x^*)} \approx \abs{f'(x^*)}\abs{(x_n - x^*)}$
+        \item $x_{n+1} = f(x_n) \approx f(x^*) + f'(x^*)(x_n - x^*)$
+        \item $\abs{x_{n + 1} - x^*} = \abs{x_{n+1} - f(x^*)} \approx \abs{f'(x^*)}\abs{x_n - x^*} < \abs{x_n - x^*}$
     \end{itemize}
     \item Other cardioids have cycles, periods labeled in Fig \ref{fig:MandelbrotCycles}
 \end{itemize}
@@ -249,7 +249,7 @@ In the context of the Quadratic Julia Set described earlier...
 \section{Newton Fractals}
 
 \begin{itemize}
-    \item Newton method
+    \item Newton's method
     \begin{itemize}
         \item Iteratively approximate zeroes using tangent lines
         \item $x_{n+1} = x_n - p(x_n)/p'(x_n)$
