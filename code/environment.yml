@@ -1,0 +1,16 @@
+name: mat437pres
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8.10   # or 2.7
+  - pip
+  - mypy
+  #- jupyter
+  #- jupyter_contrib_nbextensions
+  - jupyterlab
+  - ipywidgets
+  - ipympl
+  - matplotlib
+  - numpy
+  - lenses
+  - toolz
