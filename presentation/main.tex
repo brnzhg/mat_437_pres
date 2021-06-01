@@ -47,6 +47,23 @@ Solving for $z_n$ in terms of $z_{n+1} - c$
     \abs{z_n} &= \sqrt{\abs{z_{n+1} - c}}
 \end{align*}
 
+Karl Sims gives a visualization for a disk in Fig \ref{fig:karlsims_preimage}. For one iteration,
+\begin{itemize}
+    \item Translate the disk by $-c$, halve angle for each point, shift radius towards $1$ for each point
+    \item Mirror across real axis (pre-image maps one point to two with $\pi$ arg offset)
+\end{itemize}
+
+\begin{figure}[htbp!]
+    \setlength{\abovecaptionskip}{0pt}
+    \captionsetup[subfigure]{labelformat=empty}
+    \centering
+    \subfloat[]{\includegraphics[width=.8\linewidth]{images/karlsimsfold1.png}} \\[-3ex]%
+    \subfloat[]{\includegraphics[width=.8\linewidth]{images/karlsimsfold2.png}}%
+    \caption{Approaching Julia set by pre-images of disk \cite{KarlSims}} %
+    \label{fig:karlsims_preimage}%
+\end{figure}%
+
+
 We can iterate taking the pre-image of a set containing $J_c$ to approach its shape,
 \begin{itemize}
     \item Take nbhd of infinity $S$ s.t. $J_c \subset \complexes - S$
@@ -63,22 +80,6 @@ We can iterate taking the pre-image of a set containing $J_c$ to approach its sh
     \caption{Julia set, bands around set indicate "escape" iterations \cite{JuliaTimeEscape}}
     \label{fig:julia_escape}
 \end{figure}
-
-Karl Sims gives a visualization for a disk in Fig \ref{fig:karlsims_preimage}. For one iteration,
-\begin{itemize}
-    \item Translate the disk by $-c$, halve angle for each point, shift radius towards $1$ for each point
-    \item Mirror across real axis (pre-image maps one point to two with $\pi$ arg offset)
-\end{itemize}
-
-\begin{figure}[htbp!]
-    \setlength{\abovecaptionskip}{0pt}
-    \captionsetup[subfigure]{labelformat=empty}
-    \centering
-    \subfloat[]{\includegraphics[width=.8\linewidth]{images/karlsimsfold1.png}} \\[-3ex]%
-    \subfloat[]{\includegraphics[width=.8\linewidth]{images/karlsimsfold2.png}}%
-    \caption{Approaching Julia set by pre-images of disk \cite{KarlSims}} %
-    \label{fig:karlsims_preimage}%
-\end{figure}%
 
 
 
@@ -219,6 +220,33 @@ For $c$ on the boundary of those with fixed points, we have $\abs{z^*} = \frac{1
 
 \section{Visualizations}
 
+\begin{itemize}
+    \item Common: color based on iterations takes to "escape" (see Fig \ref{fig:julia_escape}, \ref{fig:JuliaAndMandelbrot})
+    \item Orbit trap (see Fig \ref{fig:OrbitTrap})
+    \begin{itemize}
+        \item Color point based on how close orbit (sequence of iterations) reaches a "trap" (fixed point or line) 
+        \item Color point based on where it lands on the trap
+    \end{itemize}
+    \item Pickover Stalks use a cross for the trap, some think they look "biological" (see Fig \ref{fig:OrbitTrap}) 
+\end{itemize}
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=.8\linewidth]{images/julias-and-mandelbrot-karlsims.jpg}
+    \caption{Julia sets colored by "escape" iterations \cite{KarlSims}} %\label{fig:boat1}
+    \label{fig:JuliaAndMandelbrot}
+\end{figure}
+
+\begin{figure}[!htbp]
+    %\setlength{\abovecaptionskip}{0pt}
+    \centering
+    \subfloat[Line and point Orbit Trap \cite{LineAndPointTrap}]{\includegraphics[width=.4\linewidth]{images/Line_and_point_trap_golden.png}}%
+    \subfloat[Pickover Stalk \cite{PickoverStalks}]{\includegraphics[width=.4\linewidth]{images/Pickover-stalks.png}}%
+    \caption{Orbit trap} %
+    \label{fig:OrbitTrap}%
+\end{figure}%
+
 
 
 \section{General Julia Sets}
@@ -255,7 +283,7 @@ In the context of the Quadratic Julia Set described earlier...
         \item $x_{n+1} = x_n - p(x_n)/p'(x_n)$
         \item Works with complex functions
     \end{itemize}
-    \item $f(x) = x - p(x)/p'(x)$ can be used as the iteration function for a Julia Set
+    \item $f(x) = x - p(x)/p'(x)$, for $p$ polynomial, can be used as the iteration function for a Julia Set
     \item One Fatou Domain for each zero of $f$
     \item True Julia Set is the boundary where the method fails!
 \end{itemize}
