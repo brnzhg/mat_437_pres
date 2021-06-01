@@ -47,7 +47,7 @@ Solving for $z_n$ in terms of $z_{n+1} - c$
     \abs{z_n} &= \sqrt{\abs{z_{n+1} - c}}
 \end{align*}
 
-Karl Sims gives a visualization for a disk in Fig \ref{fig:karlsims_preimage}. For one iteration,
+Karl Sims gives a visualization for a disk and how fractal arises in Fig \ref{fig:karlsims_preimage}. For one iteration,
 \begin{itemize}
     \item Translate the disk by $-c$, halve angle for each point, shift radius towards $1$ for each point
     \item Mirror across real axis (pre-image maps one point to two with $\pi$ arg offset)
@@ -170,7 +170,7 @@ Plotting algorithm: take points in disk, iterate $P_c$, remove points that "esca
 
 
 
-\section{Mandelbrot Bound / Escape Radius}
+\section{Mandelbrot Escape Radius}
 
 Let $z_n = P_c^n(0)$,
 \[ c \in M \iff \exists n \ni \abs{z_n} > 2\ \text{\cite{MandelbrotEscapeRadius}}\]
